@@ -220,7 +220,7 @@ final class ExtendedBufferedReader extends BufferedReader {
             if (current == CR) {
                 final int next = lookAhead();
                 if (next == LF) {
-                    read();
+                    int dropping = read();
                 }
             }
             if (current == END_OF_STREAM || current == LF || current == CR) {
