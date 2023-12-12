@@ -1359,20 +1359,24 @@ class CSVParserTest {
             assertEquals("xyz", csvRecord.get(1));
         }
     }
+    private void handleParseException(CSVFormat csvFormat, String input) throws IOException {
+        CSVParser parser = csvFormat.parse(new StringReader(input));
+        parser.nextRecord();
+    }
     @Test
     void testParseWithQuoteThrowsException1() {
         final CSVFormat csvFormat = CSVFormat.DEFAULT.withQuote('\'');
-        assertThrows(IOException.class, () -> csvFormat.parse(new StringReader("'a,b,c','")).nextRecord());
+        assertThrows(IOException.class, () -> handleParseException(csvFormat, "'a,b,c','"));
     }
     @Test
     void testParseWithQuoteThrowsException2() {
         final CSVFormat csvFormat = CSVFormat.DEFAULT.withQuote('\'');
-        assertThrows(IOException.class, () -> csvFormat.parse(new StringReader("'a,b,c'abc,xyz")).nextRecord());
+        assertThrows(IOException.class, () -> handleParseException(csvFormat, "'a,b,c'abc,xyz"));
     }
     @Test
     void testParseWithQuoteThrowsException3() {
         final CSVFormat csvFormat = CSVFormat.DEFAULT.withQuote('\'');
-        assertThrows(IOException.class, () -> csvFormat.parse(new StringReader("'abc'a,b,c',xyz")).nextRecord());
+        assertThrows(IOException.class, () -> handleParseException(csvFormat, "'abc'a,b,c',xyz"));
     }
     @Test
     void testParseWithQuoteWithEscape() throws IOException {
