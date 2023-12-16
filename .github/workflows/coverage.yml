@@ -19,7 +19,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -Drat.skip=true -B package --file pom.xml
+      run: mvn -Drat.skip=true -B package --file pom.xml test jacoco:report
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
