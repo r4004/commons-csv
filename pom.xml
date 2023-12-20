@@ -70,6 +70,12 @@
       <version>1.37</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-generator-annprocess</artifactId>
+      <version>1.37</version>
+      <scope>test</scope>
+    </dependency>
       <dependency>
           <groupId>genjava</groupId>
           <artifactId>gj-csv</artifactId>
@@ -107,6 +113,20 @@
       <version>1.15.3</version>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-generator-annprocess</artifactId>
+      <version>1.37</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openjdk.jmh</groupId>
+      <artifactId>jmh-generator-annprocess</artifactId>
+      <version>1.37</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 
   <developers>
@@ -372,8 +392,6 @@
           </targetTests>
         </configuration>
       </plugin>
-
-
     </plugins>
   </build>
 
@@ -461,14 +479,6 @@
       <id>benchmark</id>
 
       <dependencies>
-
-        <dependency>
-          <groupId>org.openjdk.jmh</groupId>
-          <artifactId>jmh-generator-annprocess</artifactId>
-          <version>1.37</version>
-          <scope>test</scope>
-        </dependency>
-
         <dependency>
           <groupId>genjava</groupId>
           <artifactId>gj-csv</artifactId>
