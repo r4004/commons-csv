@@ -25,7 +25,7 @@ import static org.apache.commons.csv.Token.Type.INVALID;
  * It is used as a contract between the lexer and the parser.
  * </p>
  */
-final class Token {
+public final class Token {
 
     enum Type {
         /** Token has no valid content, i.e. is in its initialized state. */

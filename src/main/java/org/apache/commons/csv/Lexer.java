@@ -36,7 +36,7 @@ import java.io.IOException;
 /**
  * Lexical analyzer.
  */
-final class Lexer implements Closeable {
+public final class Lexer implements Closeable {
 
     private static final String CR_STRING = Character.toString(CR);
     private static final String LF_STRING = Character.toString(LF);

@@ -33,7 +33,7 @@ import java.io.Reader;
  * {@link #read()}. This reader also tracks how many characters have been read with {@link #getPosition()}.
  * </p>
  */
-final class ExtendedBufferedReader extends BufferedReader {
+public final class ExtendedBufferedReader extends BufferedReader {
 
     /** The last char returned */
     private int lastChar = UNDEFINED;

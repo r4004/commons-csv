@@ -20,7 +20,7 @@ package org.apache.commons.csv;
 /**
  * Constants for this package.
  */
-final class Constants {
+public final class Constants {
 
     static final char BACKSLASH = '\\';
 
