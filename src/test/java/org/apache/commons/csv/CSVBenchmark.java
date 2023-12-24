@@ -57,6 +57,9 @@ import org.supercsv.prefs.CsvPreference;
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Benchmark)
 public class CSVBenchmark {
+    public static void main(String[] args) throws Exception {
+        org.openjdk.jmh.Main.main(args);
+    }
 
     private static final class CountingReaderCallback implements org.skife.csv.ReaderCallback {
         public int count;
